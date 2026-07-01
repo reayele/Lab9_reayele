@@ -21,7 +21,32 @@ def main():
     while coins == "y":
         print("Tossing...")
 
-    
+        player1.toss_coin()
+        player2.toss_coin()
+        side1 = player1.get_coin_side()
+        side2 = player2.get_coin_side()
+        wallet1 = player1.get_wallet()
+        wallet2 = player2.get_wallet()
+
+        print(player1.get_name(), "tossed", side1)
+        print(player2.get_name(), "tossed", side2)
+
+        if side1 == side2:
+            print("...Match! Player 1 wins a coin.")
+            player1.win_coin()
+            player2.lose_coin()
+            print(player1.get_name(), "has", wallet1)
+            print(player2.get_name(), "has", wallet2)
+
+        else:
+            print("...No Match! Player 2 wins a coin.")
+            player1.lose_coin()
+            player2.win_coin()
+            print(player1.get_name(), "has", wallet1, "coins")
+            print(player2.get_name(), "has", wallet2, "coins")
+
+
+
 
         coins = input("Do you want to toss the coins? (y/n): ")
 if __name__ == "__main__":
