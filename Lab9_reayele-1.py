@@ -16,9 +16,13 @@ def main():
     print(player1.get_name(), "has", player1.get_wallet(), "coins.")
     print(player2.get_name(), "has", player2.get_wallet(), "coins.")
 
-    coins = input(print("Do you want to toss the coins? (y/n): "))
- 
+    coins = input("Do you want to toss the coins? (y/n): ")
+
+    while coins == "y":
+        print("Tossing...")
+
+    
+
+        coins = input("Do you want to toss the coins? (y/n): ")
 if __name__ == "__main__":
     main()
-
-
