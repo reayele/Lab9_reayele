@@ -24,5 +24,4 @@ class Player:
         def toss_coin(self):
              self.__coin.toss()
         def get_coin_side(self):
-             return self.__coin.get_sideup()
-
+           return self.__coin.get_sideup()
